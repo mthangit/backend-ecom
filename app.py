@@ -14,6 +14,11 @@ CORS(app)
 SUCCESS_URL = os.getenv('SUCCESS_URL')
 CANCEL_URL = os.getenv('CANCEL_URL')
 
+
+@app.route('/test', methods=['GET'])
+def test():
+	return jsonify({'message': 'Hello World'}), 200
+
 @app.route('/api/create-payment', methods=['POST'])
 def payment():
     data = request.get_json()
