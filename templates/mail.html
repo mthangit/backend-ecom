@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xác Nhận Mua Hàng Thành Công</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .email-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            color: #28a745;
+            font-size: 24px;
+        }
+        .message {
+            text-align: center;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .order-details {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .order-details p {
+            margin: 10px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .footer p {
+            font-size: 14px;
+            color: #777;
+        }
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .btn {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="email-container">
+    <div class="header">
+        <h1>Xác Nhận Mua Hàng Thành Công</h1>
+    </div>
+
+    <div class="message">
+        <p>Cảm ơn bạn đã mua hàng tại Glow & Grow!</p>
+        <p>Đơn hàng của bạn đã được xác nhận thành công và đang được xử lý.</p>
+    </div>
+
+    <div class="order-details">
+        <h3>Chi tiết đơn hàng:</h3>
+        <p><strong>Tên khách hàng:</strong> {{ name }}</p>
+        <p><strong>Ngày đặt hàng:</strong> {{date}} </p>
+		<p><strong>Sản phẩm:</strong> {{product}}</p>
+		<p><strong>Giá:</strong> {{ '{:,.0f}'.format(price) }} VNĐ</p>
+		<p><strong>Địa chỉ giao hàng:</strong> {{address}} </p>
+        <p><strong>Phương thức thanh toán:</strong> {{payment_type}} </p>
+    </div>
+</div>
+
+</body>
+</html>
